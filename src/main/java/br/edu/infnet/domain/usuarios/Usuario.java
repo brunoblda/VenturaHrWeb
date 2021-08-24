@@ -20,16 +20,8 @@ public class Usuario {
     private String tipoDeConta;
     private String cpf;
     private String razaoSocial;
-    private Boolean administrador;
     private String cnpj;
-
-    public Boolean getAdministrador() {
-        return administrador;
-    }
-
-    public void setAdministrador(Boolean administrador) {
-        this.administrador = administrador;
-    }
+   
 
     public Integer getId(){
         return id;

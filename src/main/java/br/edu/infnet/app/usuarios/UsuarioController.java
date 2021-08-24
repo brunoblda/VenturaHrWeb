@@ -25,7 +25,7 @@ import java.time.Clock;
  *
  * @author bruno
  */
-@WebServlet(name = "UsuarioController", urlPatterns = {"/cadastrar","/index","/confirmacao"})
+@WebServlet(name = "UsuarioController", urlPatterns = {"/cadastrar","/confirmacao","/index"})
 public class UsuarioController extends HttpServlet {
  
     @Override
@@ -43,9 +43,7 @@ public class UsuarioController extends HttpServlet {
             url = "/usuarios" + userPath + ".jsp";           
             if (userPath.equals("/cadastrar")){                            
             }
-            if (userPath.equals("/confirmacao")){ 
-                
-                
+            if (userPath.equals("/confirmacao")){            
                 
             } 
             
@@ -79,7 +77,7 @@ public class UsuarioController extends HttpServlet {
             String senha1 = request.getParameter("senha1");
             String senha2 = request.getParameter("senha2");
             String tipoDeConta = request.getParameter("tipoDeConta");
-            String administrador = request.getParameter("administrador");
+         
                  
             Collections.addAll(principalStrings, nome, endereco,telefone, email
             , senha1, senha2, tipoDeConta);
@@ -141,11 +139,6 @@ public class UsuarioController extends HttpServlet {
             usuarioEscrito.setCpf(cpf);
             usuarioEscrito.setCnpj(cnpj);
             usuarioEscrito.setRazaoSocial(razaoSocial);
-            if ("True".equalsIgnoreCase(administrador)){
-                usuarioEscrito.setAdministrador(Boolean.TRUE);
-            }else{
-                usuarioEscrito.setAdministrador(Boolean.FALSE);
-            }
 
             UsuarioService us = new UsuarioService();
             us.CadastrarUsuario(usuarioEscrito);

@@ -52,6 +52,7 @@
                                                         <td>
                                                             <input type="radio" name="tipoDeConta" value="Candidato"> Candidato
                                                             <input type="radio" name="tipoDeConta" value="Empresa"> Empresa
+                                                            <input type="radio" name="tipoDeConta" value="Administrador"> Administrador
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -65,14 +66,7 @@
                                                     <tr>
                                                         <td align="left"><font size="2">CNPJ:</font></td>
                                                         <td><input type="text" name="cnpj" size="20"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td align="left"><font size="2">Administrador:</font></td>
-                                                        <td>
-                                                            <input type="radio" name="administrador" value="true"> Sim
-                                                            <input type="radio" name="administrador" value="false"> Não
-                                                        </td>
-                                                    </tr>
+                                                    </tr>                                                  
                                                     <tr>
                                                         <td colspan="2">
                                                             <p align="center">
